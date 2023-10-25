@@ -55,7 +55,7 @@ jobs:
       - name: Trigger AWS Systems Manager Run Command
         run: |
           aws ssm send-command \
-            --document-name " Prod-Github-Actions2" \
+            --document-name "Prod-Github-Actions2" \
             --targets '[{"Key":"InstanceIds","Values":["i-05188b936e41850e2"]}]' \
             --timeout-seconds 600 \
             --max-concurrency "50" \
