@@ -38,4 +38,6 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:staging${{ github.run_number }},
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:staginglatest
+          build-args: |
+            SPRING_PROFILE=staging
 
