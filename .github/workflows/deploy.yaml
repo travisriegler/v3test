@@ -51,3 +51,13 @@ jobs:
           role-to-assume: arn:aws:iam::881990811866:role/Testing_github_actions_fix
           role-session-name: samplerolesession
           aws-region: "us-east-1"
+
+      - name: Trigger AWS Systems Manager Run Command
+        run: |
+          aws ssm send-command \
+            --document-name " Prod-Github-Actions2" \
+            --targets '[{"Key":"InstanceIds","Values":["i-05188b936e41850e2"]}]' \
+            --timeout-seconds 600 \
+            --max-concurrency "50" \
+            --max-errors "0" \
+            --region "us-east-1"
