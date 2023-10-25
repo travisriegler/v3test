@@ -41,3 +41,6 @@ jobs:
           build-args: |
             SPRING_PROFILE=staging
 
+      - name: Build with Maven
+        run: mvn clean test
+
