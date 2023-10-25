@@ -40,4 +40,3 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:latest
           build-args: |
             SPRING_PROFILE=prod
-
