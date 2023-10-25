@@ -18,7 +18,6 @@ jobs:
           distribution: 'corretto'
           java-version: '17'
 
-
       - name: Build with Maven
         run: mvn clean test
 
@@ -39,3 +38,6 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:${{ github.run_number }},
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:latest
+          build-args: |
+            SPRING_PROFILE=prod
+
