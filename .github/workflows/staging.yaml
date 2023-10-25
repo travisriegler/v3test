@@ -39,6 +39,3 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:staging${{ github.run_number }},
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:staginglatest
 
-      - name: Build with Maven
-        run: mvn clean test
-

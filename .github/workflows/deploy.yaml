@@ -39,4 +39,3 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:${{ github.run_number }},
             ${{ secrets.DOCKERHUB_USERNAME }}/v3test:latest
-
