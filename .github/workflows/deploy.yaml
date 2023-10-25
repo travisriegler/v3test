@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   build:
+    name: build-prod
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
