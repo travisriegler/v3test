@@ -9,7 +9,7 @@ public class TestController {
 
     @GetMapping
     public ResponseEntity<String> getTest() {
-        return ResponseEntity.ok("Test complete");
+        return ResponseEntity.ok("testing github");
     }
 }
 
